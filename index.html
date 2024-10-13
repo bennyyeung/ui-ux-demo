@@ -4,143 +4,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <style>
+      #loading {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #spinner {
+        animation: rotate 1s infinite linear;
+        width: 80px;
+        height: 80px;
+        border: 1rem solid #e73516; /* Red color */
+        border-bottom: 1rem solid #fff; /* White color for the bottom part */
+        border-radius: 50%;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #content {
+        display: none; /* Initially hide the content */
+      }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <nav id="navbar">
-      <div class="logo">Designer & Web Developer</div>
-      <div class="navigation">
-        <a href="#projects">projects</a>
-        <a href="#about">about</a>
-        <a href="#contact">contact</a>
-      </div>
-    </nav>
-    <header id="top_part">
-      <div class="about-content">
-        <h3>
-          Hi, I’m Benny. I’m a Designer and Front-End Web Developer with over a decade of experience in graphic design.
-          I specialise in building responsive, accessible, and visually engaging user interfaces.
-        </h3>
-        <p>Welcome to my portfolio website.</p>
-        <button class="contact-btn" id="contactBtn">Contact Me</button>
-
-        <div class="social-media">
-          <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/bennyyeung" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </a>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <div id="content">
+      <nav id="navbar">
+        <div class="logo">Designer & Web Developer</div>
+        <div class="navigation">
+          <a href="#projects">projects</a>
+          <a href="#about">about</a>
+          <a href="#contact">contact</a>
         </div>
-      </div>
-      <img
-        id="rightImage"
-        src="https://res.cloudinary.com/dojzx3lcr/image/upload/v1728849661/Portfolio/q2ayoufnsnfgqtbbcr0y.jpg"
-      />
-    </header>
-    <section id="projects">
-      <h2>projects</h2>
-      <div class="gallery">
-        <img src="https://via.placeholder.com/300" alt="Project 1" onclick="magnify(this.src)" />
-        <img src="https://via.placeholder.com/300" alt="Project 2" onclick="magnify(this.src)" />
-        <img src="https://via.placeholder.com/300" alt="Project 3" onclick="magnify(this.src)" />
-      </div>
-    </section>
-    <section id="about">
-      <h2>about</h2>
-      <p>
-        I’m a Designer and Front-End Web Developer with over a decade of experience in graphic design and architecture.
-        My passion lies in creating seamless, intuitive digital experiences that bridge the gap between user needs and
-        business goals. With a strong foundation in web development and a deep understanding of user-centered design
-        principles.
-      </p>
-      <p>
-        With a strong foundation in web development and a deep understanding of user-centered design principles, I’ve
-        developed the ability to translate complex requirements into clean, functional, and visually appealing
-        interfaces. My background in graphic design has fostered a meticulous attention to detail, ensuring that every
-        element serves a purpose. Additionally, my exposure to architectural principles has enhanced my ability to think
-        about layout and compatibility holistically, helping me design digital environments that feel intuitive and easy
-        to navigate for users.
-      </p>
-      <p>
-        I’ve been expanding my skill set into UX/UI design, focusing on usability and interaction design. My growing
-        proficiency in full-stack development, combined with expertise in tools like Figma and Adobe Suites, enables me
-        to craft creative, cohesive designs that consider both aesthetics and functionality. I thrive on collaborating
-        with cross-functional teams to deliver user-friendly solutions and am constantly exploring the latest trends in
-        design systems, accessibility, and user research to enhance the overall user experience.
-      </p>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>01234 567890</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-at"></i>
-            <span>wingardium_leviosa@owlmail.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>
-              The Cupboard under the Stairs, <br />
-              4 Privet Drive, <br />
-              Little Whinging, <br />
-              Surrey
-            </span>
-          </div>
-          <tr>
-            <td>
-              <div class="social-media-contact">
-                <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon-2">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon-2">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/bennyyeung" target="_blank" class="social-icon-2">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.facebook.com/" target="_blank" class="social-icon-2">
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" class="social-icon-2">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </td>
-          </tr>
-        </div>
+      </nav>
+      <header id="top_part">
+        <div class="about-content">
+          <h3>
+            Hi, I’m Benny. I’m a Designer and Front-End Web Developer with over a decade of experience in graphic
+            design. I specialise in building responsive, accessible, and visually engaging user interfaces.
+          </h3>
+          <p>Welcome to my portfolio website.</p>
+          <button class="contact-btn" id="contactBtn">Contact Me</button>
 
-        <div class="contact-form">
-          <form>
-            <input type="text" placeholder="name" required />
-            <input type="email" placeholder="email" required /><br />
-            <textarea placeholder="your message" required rows="5"></textarea><br />
-            <button class="send-btn">send</button>
-          </form>
+          <div class="social-media">
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/bennyyeung" target="_blank" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+        <img
+          id="rightImage"
+          src="https://res.cloudinary.com/dojzx3lcr/image/upload/v1728849661/Portfolio/q2ayoufnsnfgqtbbcr0y.jpg"
+        />
+      </header>
+      <section id="projects">
+        <h2>projects</h2>
+        <div class="gallery">
+          <img src="https://via.placeholder.com/300" alt="Project 1" onclick="magnify(this.src)" />
+          <img src="https://via.placeholder.com/300" alt="Project 2" onclick="magnify(this.src)" />
+          <img src="https://via.placeholder.com/300" alt="Project 3" onclick="magnify(this.src)" />
+        </div>
+      </section>
+      <section id="about">
+        <h2>about</h2>
+        <p>
+          I’m a Designer and Front-End Web Developer with over a decade of experience in graphic design and
+          architecture. My passion lies in creating seamless, intuitive digital experiences that bridge the gap between
+          user needs and business goals. With a strong foundation in web development and a deep understanding of
+          user-centered design principles.
+        </p>
+        <p>
+          With a strong foundation in web development and a deep understanding of user-centered design principles, I’ve
+          developed the ability to translate complex requirements into clean, functional, and visually appealing
+          interfaces. My background in graphic design has fostered a meticulous attention to detail, ensuring that every
+          element serves a purpose. Additionally, my exposure to architectural principles has enhanced my ability to
+          think about layout and compatibility holistically, helping me design digital environments that feel intuitive
+          and easy to navigate for users.
+        </p>
+        <p>
+          I’ve been expanding my skill set into UX/UI design, focusing on usability and interaction design. My growing
+          proficiency in full-stack development, combined with expertise in tools like Figma and Adobe Suites, enables
+          me to craft creative, cohesive designs that consider both aesthetics and functionality. I thrive on
+          collaborating with cross-functional teams to deliver user-friendly solutions and am constantly exploring the
+          latest trends in design systems, accessibility, and user research to enhance the overall user experience.
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>01234 567890</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-at"></i>
+              <span>wingardium_leviosa@owlmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>
+                The Cupboard under the Stairs, <br />
+                4 Privet Drive, <br />
+                Little Whinging, <br />
+                Surrey
+              </span>
+            </div>
+            <tr>
+              <td>
+                <div class="social-media-contact">
+                  <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon-2">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon-2">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="https://github.com/bennyyeung" target="_blank" class="social-icon-2">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank" class="social-icon-2">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="social-icon-2">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </div>
 
-    <footer>
-      <p>Wand not required — just Benny, Master of Muggle Coding.</p>
-      <p class="mischief">Mischief managed.</p>
-      <p>© 2024</p>
-    </footer>
+          <div class="contact-form">
+            <form>
+              <input type="text" placeholder="name" required />
+              <input type="email" placeholder="email" required /><br />
+              <textarea placeholder="your message" required rows="5"></textarea><br />
+              <button class="send-btn">send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Wand not required — just Benny, Master of Muggle Coding.</p>
+        <p class="mischief">Mischief managed.</p>
+        <p>© 2024</p>
+      </footer>
+    </div>
     <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Show the spinner for at least 1 second
+        setTimeout(function () {
+          $("#loading").fadeOut(500, function () {
+            $("#content").fadeIn(500); // Show the content after the spinner fades out
+          });
+        }, 1000); // 1 second delay to ensure spinner is visible
+      });
+    </script>
   </body>
 </html>
