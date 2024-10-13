@@ -144,12 +144,40 @@ section {
 .gallery {
   display: flex; /* Flex layout for gallery */
   flex-wrap: wrap; /* Wrap items */
+  justify-content: space-around; /* Evenly distribute space around items */
+  margin: 0 auto; /* Center the gallery in its container */
+}
+
+.image-container {
+  margin: 10px; /* Margin for the image container */
+  text-align: center; /* Center text */
+  flex: 1 1 300px; /* Allow flexibility for each item */
+}
+
+.image-container img {
+  width: 100%; /* Full width of container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio */
+  filter: grayscale(100%); /* Make the image black and white */
+  transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions for both filter and transform */
+}
+
+.image-container img:hover {
+  filter: grayscale(0%); /* Remove grayscale filter on hover */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.image-title {
+  margin-top: 1vh; /* Space above the title */
+  font-size: 1em; /* Adjust font size as needed */
+  color: #333; /* Set text color */
 }
 
 .gallery img {
-  margin: 10px; /* Margin for images */
-  width: 300px; /* Image width */
-  height: auto; /* Automatic height */
+  margin: 2vw; /* Margin for images */
+  width: 500px; /* Fixed width */
+  height: 700px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio while filling the dimensions */
   cursor: pointer; /* Pointer on hover */
 }
 
