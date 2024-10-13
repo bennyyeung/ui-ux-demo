@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default navbar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(51, 51, 51, 0.5); /* Dark background with 50% opacity */
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.3s ease; /* Smooth transition for the changes */
+}
+
+/* Navbar after scrolling */
+nav.scrolled {
+  background-color: rgba(51, 51, 51, 0.9); /* Darker background with less transparency */
+  padding: 10px 20px; /* Smaller padding for a more compact navbar */
+  color: white; /* You can also change the text color if needed */
+}
+
+nav .logo {
+  font-size: 24px;
+}
+
+nav .navigation a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full height */
+  padding: 20px;
+}
+
+.about-content {
+  width: 50%;
+  padding: 20px;
+}
+
+#rightImage {
+  background-image: url("https://via.placeholder.com/600x800");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  margin: 10px;
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto; /* Auto height for mobile */
+  }
+
+  .about-content {
+    width: 100%; /* Full width on mobile */
+    padding: 10px;
+  }
+
+  #rightImage {
+    width: 100%;
+    height: 50vh; /* Adjust height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  nav .navigation a {
+    margin: 0 10px;
+  }
+
+  .about-content h1 {
+    font-size: 24px; /* Smaller heading */
+  }
+
+  #rightImage {
+    height: 40vh; /* Adjust further for small screens */
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
