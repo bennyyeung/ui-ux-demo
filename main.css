@@ -2,66 +2,108 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+footer {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Default navbar styling */
 nav {
   display: flex;
+  font-weight: bold;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: rgba(51, 51, 51, 0.5); /* Dark background with 50% opacity */
+  padding: 4vh 5%; /* 5% padding for left and right */
+  background-color: transparent;
   color: white;
   position: fixed;
   width: 100%;
   z-index: 10;
-  transition: all 0.3s ease; /* Smooth transition for the changes */
-}
-
-/* Navbar after scrolling */
-nav.scrolled {
-  background-color: rgba(51, 51, 51, 0.9); /* Darker background with less transparency */
-  padding: 10px 20px; /* Smaller padding for a more compact navbar */
-  color: white; /* You can also change the text color if needed */
+  transition: all 0.3s ease;
 }
 
 nav .logo {
+  color: #e73516;
   font-size: 24px;
 }
 
 nav .navigation a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 1vh 3vh 1vh 6vh;
+}
+
+nav .navigation {
+  display: flex; /* Ensure navigation items are in a row */
+  align-items: center; /* Vertically align items */
+}
+
+/* Navbar after scrolling */
+nav.scrolled {
+  background-color: #ffffff; /* Darker background with less transparency */
+  padding: 30px 5%; /* Keep the same left/right padding for consistency */
+  transition: all 0.5s ease; /* Ensure a smooth transition */
+}
+
+nav.scrolled .navigation a {
+  color: black; /* Change link color to black after scroll */
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh; /* Full height */
-  padding: 20px;
+  height: 100vh;
+  padding: 20px 5%;
+  position: relative; /* Make the header a reference for positioning */
 }
 
 .about-content {
+  margin-left: -4vw;
   width: 50%;
   padding: 20px;
 }
 
-#rightImage {
-  background-image: url("https://via.placeholder.com/600x800");
-  background-size: cover;
-  background-position: center;
-  width: 50%;
-  height: 100%;
+.social-media {
+  margin-top: 10px; /* Add some space above the icons */
 }
 
+.social-icon {
+  display: inline-block; /* Use inline-block to prevent spacing issues */
+  margin: 0 10px; /* Optional margin for spacing */
+  vertical-align: middle; /* Align icons vertically */
+}
+
+.social-icon:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+#rightImage {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.about-content,
 section {
-  padding: 40px 20px;
+  padding: 5%; /* Set top/bottom padding to 40px and left/right padding to 8% */
+}
+
+#projects h2,
+#contact h2 {
+  font-size: 30px;
+  width: 6%;
+  border-bottom: 4px solid #e73516;
+}
+
+#about h2 {
+  font-size: 30px;
+  width: 4.5%;
+  border-bottom: 4px solid #e73516;
 }
 
 .gallery {
@@ -89,6 +131,99 @@ section {
   background-color: #0056b3;
 }
 
+/* Contact Section Styles */
+#contact {
+  padding: 5%;
+}
+
+.contact-container {
+  display: flex; /* Use flexbox to split into two columns */
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10vh;
+  gap: 40px; /* Space between the two sections */
+  font-weight: bold;
+}
+
+.contact-info {
+  flex: 1; /* Take up equal space as the form */
+  margin-left: 2vw;
+  padding-right: 20px;
+}
+
+.contact-item {
+  display: flex; /* Flexbox to align icon and text horizontally */
+  align-items: flex-start; /* Align items at the top */
+  margin-bottom: 2vh;
+}
+
+.contact-item i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.2em;
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.contact-item span {
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.contact-form {
+  width: 100%; /* Ensure the form takes the full width */
+  margin-left: 45vw;
+  margin-bottom: 5vh;
+}
+
+table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Remove gaps between borders */
+}
+
+td {
+  padding: 2vh; /* Padding for table cells */
+}
+
+td label {
+  margin-bottom: 0; /* Remove any bottom margin from the label */
+  font-weight: bold; /* Make labels bold */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #e73516; /* Add underline */
+  padding: 5px; /* Padding inside inputs */
+  width: 100%; /* Full width inputs */
+  font-family: "Poppins", sans-serif; /* Consistent font */
+  outline: none; /* Remove outline on focus */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-bottom: 2px solid #e73516; /* Change underline color on focus */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  height: 100px; /* Fixed height for textarea */
+}
+
+footer {
+  font-weight: bold;
+  text-align: center;
+  padding: 6vh 0 8vh 0;
+  color: rgb(0, 0, 0);
+}
+
+footer p {
+  margin: 0.5vh;
+}
+
+footer .mischief {
+  color: #e73516;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   header {
@@ -105,6 +240,18 @@ section {
     width: 100%;
     height: 50vh; /* Adjust height for mobile */
   }
+  .contact-container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+  }
+
+  .contact-info {
+    margin-bottom: 20px; /* Add space between info and form */
+    padding-right: 0;
+  }
+
+  .contact-form button {
+    width: 100%; /* Ensure full width button on small screens */
+  }
 }
 
 @media (max-width: 480px) {
@@ -119,11 +266,4 @@ section {
   #rightImage {
     height: 40vh; /* Adjust further for small screens */
   }
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
 }

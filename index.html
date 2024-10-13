@@ -4,54 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <nav id="navbar">
-      <div class="logo">My Portfolio</div>
+      <div class="logo">Designer & Web Developer</div>
       <div class="navigation">
-        <a href="#work">Work</a>
-        <a href="#bio">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">projects</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
       </div>
     </nav>
     <header id="top_part">
       <div class="about-content">
-        <h1>Hello, I'm [Your Name]</h1>
-        <p>Welcome to my portfolio website. Here is a bit about me...</p>
+        <h3>
+          Hi, I’m Benny. I’m a Designer and Front-End Web Developer with over a decade of experience in graphic design.
+          I specialise in building responsive, accessible, and visually engaging user interfaces.
+        </h3>
+        <p>Welcome to my portfolio website.</p>
         <button class="btn">Contact Me</button>
+        <div class="social-media">
+          <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/bennyyeung" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
-      <div id="rightImage"></div>
+      <img
+        id="rightImage"
+        src="https://res.cloudinary.com/dojzx3lcr/image/upload/v1728849661/Portfolio/q2ayoufnsnfgqtbbcr0y.jpg"
+      />
     </header>
-    <section id="work">
-      <h2>My Work</h2>
+    <section id="projects">
+      <h2>projects</h2>
       <div class="gallery">
         <img src="https://via.placeholder.com/300" alt="Project 1" onclick="magnify(this.src)" />
         <img src="https://via.placeholder.com/300" alt="Project 2" onclick="magnify(this.src)" />
         <img src="https://via.placeholder.com/300" alt="Project 3" onclick="magnify(this.src)" />
       </div>
     </section>
-    <section id="bio">
-      <h2>About Me</h2>
+    <section id="about">
+      <h2>about</h2>
       <p>Information about myself and my background...</p>
     </section>
     <section id="contact">
       <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
-        <button class="btn">Send</button>
-      </form>
+      <div class="contact-container">
+        <!-- Contact info on the left -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>01234 567890</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-at"></i>
+            <span>wingardium_leviosa@owlmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>
+              The Cupboard under the Stairs, <br />
+              4 Privet Drive, <br />
+              Little Whinging, <br />
+              Surrey
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact form on the right -->
+        <form class="contact-form">
+          <table>
+            <tr>
+              <td><label for="name">name</label></td>
+              <td><input type="text" id="name" required /></td>
+            </tr>
+            <tr>
+              <td><label for="email">email</label></td>
+              <td><input type="email" id="email" required /></td>
+            </tr>
+            <tr>
+              <td><label for="message">your message</label></td>
+              <td><textarea id="message" required rows="5"></textarea></td>
+            </tr>
+          </table>
+          <button class="btn">Send</button>
+        </form>
+      </div>
     </section>
+
     <footer>
-      <p>© 2024 My Portfolio</p>
+      <p>Wand not required — just Benny, Master of Muggle Coding.</p>
+      <p class="mischief">Mischief managed.</p>
+      <p>© 2024</p>
     </footer>
     <script src="index.js"></script>
   </body>
