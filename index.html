@@ -24,7 +24,8 @@
           I specialise in building responsive, accessible, and visually engaging user interfaces.
         </h3>
         <p>Welcome to my portfolio website.</p>
-        <button class="btn">Contact Me</button>
+        <button class="contact-btn" id="contactBtn">Contact Me</button>
+
         <div class="social-media">
           <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
             <i class="fab fa-twitter"></i>
@@ -34,6 +35,12 @@
           </a>
           <a href="https://github.com/bennyyeung" target="_blank" class="social-icon">
             <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
           </a>
         </div>
       </div>
@@ -52,12 +59,31 @@
     </section>
     <section id="about">
       <h2>about</h2>
-      <p>Information about myself and my background...</p>
+      <p>
+        I’m a Designer and Front-End Web Developer with over a decade of experience in graphic design and architecture.
+        My passion lies in creating seamless, intuitive digital experiences that bridge the gap between user needs and
+        business goals. With a strong foundation in web development and a deep understanding of user-centered design
+        principles.
+      </p>
+      <p>
+        With a strong foundation in web development and a deep understanding of user-centered design principles, I’ve
+        developed the ability to translate complex requirements into clean, functional, and visually appealing
+        interfaces. My background in graphic design has fostered a meticulous attention to detail, ensuring that every
+        element serves a purpose. Additionally, my exposure to architectural principles has enhanced my ability to think
+        about layout and compatibility holistically, helping me design digital environments that feel intuitive and easy
+        to navigate for users.
+      </p>
+      <p>
+        I’ve been expanding my skill set into UX/UI design, focusing on usability and interaction design. My growing
+        proficiency in full-stack development, combined with expertise in tools like Figma and Adobe Suites, enables me
+        to craft creative, cohesive designs that consider both aesthetics and functionality. I thrive on collaborating
+        with cross-functional teams to deliver user-friendly solutions and am constantly exploring the latest trends in
+        design systems, accessibility, and user research to enhance the overall user experience.
+      </p>
     </section>
     <section id="contact">
       <h2>Contact</h2>
       <div class="contact-container">
-        <!-- Contact info on the left -->
         <div class="contact-info">
           <div class="contact-item">
             <i class="fas fa-phone"></i>
@@ -76,26 +102,37 @@
               Surrey
             </span>
           </div>
+          <tr>
+            <td>
+              <div class="social-media-contact">
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon-2">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon-2">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/bennyyeung" target="_blank" class="social-icon-2">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" class="social-icon-2">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon-2">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
         </div>
 
-        <!-- Contact form on the right -->
-        <form class="contact-form">
-          <table>
-            <tr>
-              <td><label for="name">name</label></td>
-              <td><input type="text" id="name" required /></td>
-            </tr>
-            <tr>
-              <td><label for="email">email</label></td>
-              <td><input type="email" id="email" required /></td>
-            </tr>
-            <tr>
-              <td><label for="message">your message</label></td>
-              <td><textarea id="message" required rows="5"></textarea></td>
-            </tr>
-          </table>
-          <button class="btn">Send</button>
-        </form>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="name" required />
+            <input type="email" placeholder="email" required /><br />
+            <textarea placeholder="your message" required rows="5"></textarea><br />
+            <button class="send-btn">send</button>
+          </form>
+        </div>
       </div>
     </section>
 

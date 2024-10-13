@@ -1,49 +1,59 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Set box-sizing to border-box for all elements */
 }
 
 body,
 footer {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Poppins", sans-serif; /* Set font for body and footer */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 nav {
-  display: flex;
-  font-weight: bold;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4vh 5%; /* 5% padding for left and right */
-  background-color: transparent;
-  color: white;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  transition: all 0.3s ease;
+  display: flex; /* Flex layout for navigation */
+  font-weight: bold; /* Bold text */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  padding: 4vh 5%; /* Padding for navigation */
+  background-color: transparent; /* Transparent background */
+  color: white; /* Text color */
+  position: fixed; /* Fixed positioning */
+  width: 100%; /* Full width */
+  z-index: 10; /* Stack above other elements */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
 nav .logo {
-  color: #e73516;
-  font-size: 24px;
+  color: #e73516; /* Logo color */
+  font-size: 24px; /* Logo font size */
 }
 
 nav .navigation a {
-  color: white;
-  text-decoration: none;
-  margin: 1vh 3vh 1vh 6vh;
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin: 1vh 3vh 1vh 6vh; /* Margin for links */
+}
+
+nav .navigation a:hover {
+  border-bottom: 2px solid #ffffff; /* Underline on hover */
+  text-decoration-color: #e73516; /* Underline color */
 }
 
 nav .navigation {
-  display: flex; /* Ensure navigation items are in a row */
-  align-items: center; /* Vertically align items */
+  display: flex; /* Flex layout for navigation items */
+  align-items: center; /* Center items vertically */
 }
 
 /* Navbar after scrolling */
 nav.scrolled {
-  background-color: #ffffff; /* Darker background with less transparency */
-  padding: 30px 5%; /* Keep the same left/right padding for consistency */
-  transition: all 0.5s ease; /* Ensure a smooth transition */
+  background-color: #ffffff; /* Darker background */
+  padding: 30px 5%; /* Consistent padding */
+  transition: all 0.5s ease; /* Smooth transition */
+}
+
+/* Underline when hovered, but only when the nav is scrolled */
+nav.scrolled .navigation a:hover {
+  border-bottom: 2px solid black; /* Black underline on hover */
 }
 
 nav.scrolled .navigation a {
@@ -51,164 +61,238 @@ nav.scrolled .navigation a {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 20px 5%;
-  position: relative; /* Make the header a reference for positioning */
+  display: flex; /* Flex layout for header */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Full height */
+  padding: 20px 5%; /* Padding for header */
+  position: relative; /* Positioning reference */
 }
 
 .about-content {
-  margin-left: -4vw;
-  width: 50%;
-  padding: 20px;
+  margin-left: -4vw; /* Adjust margin */
+  width: 55%; /* Width for about content */
+  padding: 20px; /* Padding */
+}
+
+.about-content p {
+  margin-left: -1.5vw; /* Adjust margin */
+  padding: 3vh; /* Padding */
 }
 
 .social-media {
-  margin-top: 10px; /* Add some space above the icons */
+  margin-top: 5vh; /* Space above icons */
 }
 
 .social-icon {
-  display: inline-block; /* Use inline-block to prevent spacing issues */
-  margin: 0 10px; /* Optional margin for spacing */
-  vertical-align: middle; /* Align icons vertically */
+  display: inline-flex; /* Inline-flex for centering */
+  justify-content: center; /* Center icon */
+  align-items: center; /* Center icon vertically */
+  margin: 0 2rem; /* Horizontal margin for spacing */
+  font-size: 24px; /* Icon size */
+  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
+  border-radius: 50%; /* Round shape */
+  padding: 10px; /* Padding for circular effect */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  text-decoration: none; /* Remove underline */
+  color: #e73516; /* Icon color */
 }
 
 .social-icon:hover {
-  color: #0056b3; /* Darker color on hover */
+  cursor: pointer; /* Pointer on hover */
+  color: #fff; /* Change text color on hover */
+  background: #e73516; /* Background color on hover */
+  box-shadow: 0 0 0 10px rgba(255, 66, 107, 0.3); /* Shadow on hover */
 }
 
 #rightImage {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  width: 50%; /* Right image width */
+  height: 100%; /* Full height */
+  position: absolute; /* Absolute positioning */
+  right: 0; /* Align to right */
+  top: 0; /* Align to top */
+  bottom: 0; /* Align to bottom */
 }
 
 .about-content,
 section {
-  padding: 5%; /* Set top/bottom padding to 40px and left/right padding to 8% */
+  padding: 5%; /* Padding for sections */
+}
+
+.about-content h3 {
+  font-size: 25px; /* Heading font size */
+}
+
+.about-content p {
+  font-size: 16px; /* Paragraph font size */
 }
 
 #projects h2,
 #contact h2 {
-  font-size: 30px;
-  width: 6%;
-  border-bottom: 4px solid #e73516;
+  font-size: 30px; /* Heading font size */
+  width: 6%; /* Width for heading */
+  border-bottom: 4px solid #e73516; /* Underline */
 }
 
 #about h2 {
-  font-size: 30px;
-  width: 4.5%;
-  border-bottom: 4px solid #e73516;
+  font-size: 30px; /* Heading font size */
+  width: 4.5%; /* Width for heading */
+  border-bottom: 4px solid #e73516; /* Underline */
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* Flex layout for gallery */
+  flex-wrap: wrap; /* Wrap items */
 }
 
 .gallery img {
-  margin: 10px;
-  width: 300px;
-  height: auto;
-  cursor: pointer;
+  margin: 10px; /* Margin for images */
+  width: 300px; /* Image width */
+  height: auto; /* Automatic height */
+  cursor: pointer; /* Pointer on hover */
 }
 
-.btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background 0.3s;
+.contact-btn {
+  font-size: 18px; /* Button font size */
+  font-family: "Poppins", sans-serif; /* Button font */
+  font-weight: bold; /* Button font weight */
+  color: #e73516; /* Text color */
+  background-color: #ffffff; /* Background color */
+  border: 3px solid #e73516; /* Button border */
+  padding: 5px 40px; /* Button padding */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 25px; /* Rounded edges */
+  transition: background 0.3s; /* Transition effect */
+  width: 100%; /* Full width */
+  max-width: 15vw; /* Max width */
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.contact-btn:hover {
+  box-shadow: 0px 10px 30px #e73516c9; /* Shadow on hover */
+  cursor: pointer; /* Pointer on hover */
+  color: #fff; /* Change text color on hover */
+  background: #e73516; /* Change background on hover */
+}
+
+.social-icon-2 {
+  display: inline-flex; /* Inline-flex for centering */
+  justify-content: center; /* Center icon */
+  align-items: center; /* Center icon vertically */
+  margin: 0 15px; /* Horizontal margin for spacing */
+  font-size: 20px; /* Icon size */
+  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
+  border-radius: 50%; /* Round shape */
+  padding: 10px; /* Padding for circular effect */
+  width: 30px; /* Fixed width */
+  height: 30px; /* Fixed height */
+  text-decoration: none; /* Remove underline */
+  color: #e73516; /* Icon color */
+}
+
+.social-icon-2:hover {
+  cursor: pointer; /* Pointer on hover */
+  color: #fff; /* Change text color on hover */
+  background: #e73516; /* Background color on hover */
+  box-shadow: 0 0 0 8px rgba(255, 66, 107, 0.3); /* Shadow on hover */
 }
 
 /* Contact Section Styles */
 #contact {
-  padding: 5%;
+  padding: 5%; /* Padding for contact section */
 }
 
 .contact-container {
-  display: flex; /* Use flexbox to split into two columns */
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 10vh;
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between elements */
+  align-items: flex-start; /* Align items at the start */
+  margin-left: -2vw;
+  margin-top: 7vh; /* Margin above the contact section */
   gap: 40px; /* Space between the two sections */
-  font-weight: bold;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1; /* Equal space for both sections */
+  min-width: 300px; /* Minimum width for smaller screens */
 }
 
 .contact-info {
-  flex: 1; /* Take up equal space as the form */
-  margin-left: 2vw;
-  padding-right: 20px;
+  font-weight: bold;
+  margin-left: 2vw; /* Left margin for alignment */
+  padding-right: 20px; /* Right padding */
 }
 
 .contact-item {
-  display: flex; /* Flexbox to align icon and text horizontally */
+  display: flex; /* Flex layout for contact items */
   align-items: flex-start; /* Align items at the top */
-  margin-bottom: 2vh;
+  margin-bottom: 2vh; /* Space between items */
 }
 
 .contact-item i {
   margin-right: 10px; /* Space between icon and text */
-  font-size: 1.2em;
-  flex-shrink: 0; /* Prevent the icon from shrinking */
+  font-size: 1.2em; /* Icon size */
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .contact-item span {
-  line-height: 1.5; /* Adjust line height for better readability */
+  line-height: 1.5; /* Line height for better readability */
 }
 
+/* Form Styles */
 .contact-form {
-  width: 100%; /* Ensure the form takes the full width */
-  margin-left: 45vw;
-  margin-bottom: 5vh;
+  padding: 0 20px; /* Add some padding */
 }
 
-table {
-  width: 100%; /* Full width table */
-  border-collapse: collapse; /* Remove gaps between borders */
-}
-
-td {
-  padding: 2vh; /* Padding for table cells */
-}
-
-td label {
-  margin-bottom: 0; /* Remove any bottom margin from the label */
-  font-weight: bold; /* Make labels bold */
+form {
+  display: flex; /* Use flexbox for form layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between form elements */
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
   border: none; /* Remove default border */
-  border-bottom: 2px solid #e73516; /* Add underline */
-  padding: 5px; /* Padding inside inputs */
+  border-bottom: 2px solid #e73516; /* Underline for inputs */
+  padding: 15px; /* Increase padding */
   width: 100%; /* Full width inputs */
   font-family: "Poppins", sans-serif; /* Consistent font */
-  outline: none; /* Remove outline on focus */
+  outline: none; /* Remove outline */
+  font-size: 18px; /* Increase font size */
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-bottom: 2px solid #e73516; /* Change underline color on focus */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: black; /* Placeholder color */
+  font-weight: bold; /* Bold placeholder text */
 }
 
 textarea {
-  resize: vertical; /* Allow vertical resizing only */
-  height: 100px; /* Fixed height for textarea */
+  resize: vertical; /* Allow vertical resizing */
+  height: 200px; /* Increased height for textarea */
 }
 
+.send-btn {
+  font-size: 18px; /* Button font size */
+  font-family: "Poppins", sans-serif; /* Consistent font */
+  font-weight: bold; /* Button text weight */
+  color: #e73516; /* Button text color */
+  background-color: #ffffff; /* Button background color */
+  border: 3px solid #e73516; /* Button border */
+  padding: 5px 40px; /* Button padding */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 25px; /* Rounded edges */
+  transition: background 0.3s; /* Transition for button */
+  width: 30%; /* Full width button */
+}
+
+.send-btn:hover {
+  box-shadow: 0px 10px 30px #e73516c9; /* Button shadow on hover */
+  color: #fff; /* Change text color on hover */
+  background: #e73516; /* Change background on hover */
+}
 footer {
   font-weight: bold;
   text-align: center;
